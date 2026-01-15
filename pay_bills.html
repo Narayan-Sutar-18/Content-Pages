@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pay Gas Bill | Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --green: #0a9a00;
+      --light-green: #13b300;
+      --bg: #eef7ff;
+      --border: #dcdcdc;
+      --text: #222;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #ff8c00;
+    }
+
+    .logo-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe600, #ff9c00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #006400;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--white);
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: var(--green);
+      margin-bottom: 25px;
+      text-decoration: underline;
+    }
+
+    /* FORM */
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .bill-box {
+      background: #f7f7f7;
+      border: 1px dashed var(--green);
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    /* BUTTON */
+    button {
+      background: var(--green);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--light-green);
+    }
+
+    /* NOTE */
+    .note {
+      margin-top: 25px;
+      background: #f5f5f5;
+      padding: 15px;
+      border-left: 5px solid var(--green);
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">NG</div>
+      Demo Natural Gas Pvt. Ltd.
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>Pay Your Gas Bill</h1>
+
+    <form onsubmit="payBill(event)">
+      <div class="row">
+        <div class="form-group">
+          <label>Consumer Number</label>
+          <input type="text" placeholder="Enter consumer number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Registered Mobile Number</label>
+          <input type="tel" placeholder="Enter registered mobile number" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Billing Month</label>
+        <select required>
+          <option value="">-- Select Month --</option>
+          <option>January 2026</option>
+          <option>December 2025</option>
+          <option>November 2025</option>
+        </select>
+      </div>
+
+      <!-- DUMMY BILL DETAILS -->
+      <div class="bill-box">
+        <p><b>Bill Amount:</b> ₹ 1,245.00</p>
+        <p><b>Due Date:</b> 25 Jan 2026</p>
+        <p><b>Status:</b> Unpaid</p>
+      </div>
+
+      <div class="form-group">
+        <label>Select Payment Method</label>
+        <select required>
+          <option value="">-- Select --</option>
+          <option>UPI</option>
+          <option>Debit Card</option>
+          <option>Credit Card</option>
+          <option>Net Banking</option>
+        </select>
+      </div>
+
+      <button type="submit">Pay Now</button>
+    </form>
+
+  </div>
+
+  <script>
+    function payBill(e) {
+      e.preventDefault();
+      alert("Payment successful! (Demo only)");
+    }
+  </script>
+
+</body>
+</html>

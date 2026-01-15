@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CNG STATIONS </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --green: #0a9a00;
+      --light-green: #13b300;
+      --bg-blue: #eaf7ff;
+      --border: #dcdcdc;
+      --text: #222;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--bg-blue);
+      color: var(--text);
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      background: var(--green);
+      color: #fff;
+      padding: 6px 20px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* HEADER */
+    header {
+      background: #fff;
+      border-bottom: 3px solid var(--green);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #ff8c00;
+    }
+
+    .logo-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe600, #ff9c00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: #006400;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--green);
+      font-weight: bold;
+      margin: 0 8px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    nav a.active {
+      background: var(--green);
+      color: #fff;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: transparent;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: var(--green);
+      margin-bottom: 25px;
+      font-size: 30px;
+      text-decoration: underline;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f5f5f5;
+      font-weight: bold;
+    }
+
+    td:first-child,
+    th:first-child {
+      width: 80px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* FOOTER SPACE */
+    .footer-space {
+      height: 80px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div>🔥 FIRE OR GAS LEAKAGE: 7XXX XX XXXX</div>
+    <div>Toll Free Customer Care: 1XXX XXX XXX</div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">NG</div>
+      Demo Natural Gas Pvt. Ltd.<br>
+      <span style="font-size:12px;font-weight:normal;color:#666;">
+        A Joint Venture (Demo)
+      </span>
+    </div>
+
+    <nav>
+      <a>Home</a>
+      <a>About Us</a>
+      <a>Safety</a>
+      <a>Tenders</a>
+      <a>Beyond Gas</a>
+      <a>PNG</a>
+      <a class="active">CNG</a>
+      <a>Career</a>
+      <a>Vigilance</a>
+      <a>Corporate</a>
+      <a>Login</a>
+    </nav>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>CNG STATIONS</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Retail Outlet Name</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>CNG STATIONS 1</td>
+          <td>
+            Shop No. 12, Sample Plaza,<br>
+            North City Area,<br>
+            Demo State – 400001
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>CNG STATIONS 2</td>
+          <td>
+            Plot No. 45, Industrial Zone,<br>
+            Central District,<br>
+            Demo State – 400002
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>CNG STATIONS 3</td>
+          <td>
+            Ground Floor, Service Complex,<br>
+            Highway Road Area,<br>
+            Demo State – 400003
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer-space"></div>
+
+</body>
+</html>

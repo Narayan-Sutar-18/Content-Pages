@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PNG FAQ | Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --green: #0a9a00;
+    --bg: #eaf6ff;
+    --border: #dcdcdc;
+    --white: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--green);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--white);
+    border-bottom: 3px solid var(--green);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe600, #ff9c00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #006400;
+  }
+
+  .logo-text {
+    color: #ff8c00;
+    font-weight: bold;
+  }
+
+  /* CONTENT */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 6px;
+  }
+
+  h1 {
+    color: var(--green);
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+
+  /* FAQ */
+  .faq-item {
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    background: #f2f2f2;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: "-";
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 15px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>🔥 FIRE or GAS LEAKAGE: 70000 0000</div>
+  <div>📞 Toll Free Customer Care: 7000000000</div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-circle">NG</div>
+  <div class="logo-text">
+    Demo Natural Gas Pvt. Ltd.<br>
+    <small>A Joint Venture (Demo)</small>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>PNG – Frequently Asked Questions</h1>
+
+  <div class="faq-item">
+    <div class="faq-question">What is PNG?</div>
+    <div class="faq-answer">
+      Piped Natural Gas (PNG) is a clean and convenient fuel supplied through
+      underground pipelines directly to households and establishments.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How can I apply for a new PNG connection?</div>
+    <div class="faq-answer">
+      Customers can apply online by submitting the application form along with
+      the required documents through the official portal.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is PNG safe for domestic use?</div>
+    <div class="faq-answer">
+      Yes. PNG is lighter than air and disperses quickly in case of leakage,
+      making it safer when proper safety measures are followed.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What documents are required for PNG connection?</div>
+    <div class="faq-answer">
+      Proof of identity, address proof, ownership or tenancy documents, and
+      a recent photograph are typically required.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How is PNG billing done?</div>
+    <div class="faq-answer">
+      PNG billing is based on actual gas consumption measured in Standard
+      Cubic Meters (SCM) as recorded by the gas meter.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(q => {
+    q.addEventListener("click", () => {
+      q.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

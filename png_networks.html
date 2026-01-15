@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PNG Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --green: #0a9a00;
+    --bg: #eaf6ff;
+    --border: #dcdcdc;
+    --white: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  /* TOP STRIP */
+  .top-bar {
+    background: var(--green);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--white);
+    border-bottom: 3px solid var(--green);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe600, #ff9c00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #006400;
+  }
+
+  .logo-text {
+    color: #ff8c00;
+    font-weight: bold;
+  }
+
+  /* CONTENT */
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 6px;
+  }
+
+  h1 {
+    color: var(--green);
+    text-decoration: underline;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    vertical-align: top;
+    font-size: 14px;
+  }
+
+  th {
+    background: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    th {
+      display: none;
+    }
+    td {
+      padding-left: 50%;
+      position: relative;
+    }
+    td::before {
+      position: absolute;
+      left: 15px;
+      font-weight: bold;
+      content: attr(data-label);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>🔥 FIRE or GAS LEAKAGE: 7XXXXX XXXXX</div>
+  <div>📞 Toll Free Customer Care: 7XXXXXXXXX</div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-circle">NG</div>
+  <div class="logo-text">
+    Demo Natural Gas Pvt. Ltd.<br>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>GASIFIED AREA</h1>
+  
+
+  <table>
+    <thead>
+      <tr>
+        <th>Area</th>
+        <th>PNG Gas</th>
+        <th>PNG Connected to Gas Network</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Area">Goa/td>
+        <td data-label="Societies Using Gas">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolorem laborum deserunt! Doloribus odio commodi eligendi, pariatur distinctio atque vel! Necessitatibus consequuntur officiis ea nulla voluptates esse. Commodi, culpa labore?
+        </td>
+        <td data-label="Societies Connected to Gas Network">
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, quasi? Consectetur, facere obcaecati earum, dolore quae deleniti voluptas ea nisi reiciendis cum voluptatem nostrum dignissimos reprehenderit, voluptate dolorem expedita commodi.
+        </td>
+      </tr>
+
+      <tr>
+        <td data-label="Area">Goa</td>
+        <td data-label="Societies Using Gas">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quasi praesentium excepturi esse. 
+        </td>
+        <td data-label="Societies Connected to Gas Network">
+          Emgee Green
+        </td>
+      </tr>
+
+      <tr>
+        <td data-label="Area">Goa</td>
+        <td data-label="Societies Using Gas">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae soluta officia facere, iste ullam nobis cum in earum voluptatibus molestias ipsa iusto voluptas neque enim ipsam tempora provident accusantium fuga?
+        </td>
+        <td data-label="Societies Connected to Gas Network">
+          Blue Bay Residency, Palm Grove
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

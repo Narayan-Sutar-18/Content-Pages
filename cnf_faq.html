@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CNG FAQ | Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  :root {
+    --green: #0a9a00;
+    --bg: #eaf6ff;
+    --border: #dcdcdc;
+    --white: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--green);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--white);
+    border-bottom: 3px solid var(--green);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe600, #ff9c00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #006400;
+  }
+
+  .logo-text {
+    color: #ff8c00;
+    font-weight: bold;
+  }
+
+  /* CONTENT */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 6px;
+  }
+
+  h1 {
+    color: var(--green);
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+
+  /* FAQ */
+  .faq-item {
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    background: #f2f2f2;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: "-";
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 15px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>🔥 FIRE or GAS LEAKAGE: 7XXXXXXXXX</div>
+  <div>📞 Toll Free Customer Care: 7XXXX XXXXX</div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-circle">NG</div>
+  <div class="logo-text">
+    Demo Natural Gas Pvt. Ltd.<br>
+    <small>A Joint Venture (Demo)</small>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+  <h1>CNG – Frequently Asked Questions</h1>
+
+  <div class="faq-item">
+    <div class="faq-question">What is CNG?</div>
+    <div class="faq-answer">
+      Compressed Natural Gas (CNG) is an eco-friendly automotive fuel used in vehicles.
+      It produces lower emissions compared to petrol and diesel.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is CNG safe for vehicles?</div>
+    <div class="faq-answer">
+      Yes. CNG cylinders are designed and tested to withstand high pressure and are
+      safer compared to conventional fuels when used correctly.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How can I convert my vehicle to CNG?</div>
+    <div class="faq-answer">
+      Vehicle conversion must be done only at authorized CNG retrofitment centers
+      approved by the respective RTO.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What documents are required for CNG conversion?</div>
+    <div class="faq-answer">
+      Vehicle RC, valid insurance, PUC certificate, and owner identification documents
+      are typically required.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How often should CNG cylinder be tested?</div>
+    <div class="faq-answer">
+      CNG cylinders should be hydro-tested periodically as per statutory norms
+      to ensure continued safety.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(q => {
+    q.addEventListener("click", () => {
+      q.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

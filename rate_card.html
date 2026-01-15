@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rate Card | Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --green: #0a9a00;
+      --light-green: #13b300;
+      --bg: #eef7ff;
+      --border: #dcdcdc;
+      --text: #222;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #ff8c00;
+    }
+
+    .logo-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe600, #ff9c00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #006400;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--white);
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: var(--green);
+      margin-bottom: 25px;
+      text-decoration: underline;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--green);
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background: #f7f7f7;
+    }
+
+    /* NOTE */
+    .note {
+      margin-top: 25px;
+      background: #f5f5f5;
+      padding: 15px;
+      border-left: 5px solid var(--green);
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle">NG</div>
+      Demo Natural Gas Pvt. Ltd.
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>Natural Gas Rate Card</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Consumption Range</th>
+          <th>Rate (₹ / SCM)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Category">Domestic PNG</td>
+          <td data-label="Consumption Range">0 – 30 SCM</td>
+          <td data-label="Rate">₹ 24.00</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Domestic PNG</td>
+          <td data-label="Consumption Range">Above 30 SCM</td>
+          <td data-label="Rate">₹ 26.50</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Commercial PNG</td>
+          <td data-label="Consumption Range">All Units</td>
+          <td data-label="Rate">₹ 39.00</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Industrial PNG</td>
+          <td data-label="Consumption Range">All Units</td>
+          <td data-label="Rate">₹ 41.50</td>
+        </tr>
+        <tr>
+          <td data-label="Category">CNG (Vehicles)</td>
+          <td data-label="Consumption Range">Per Kg</td>
+          <td data-label="Rate">₹ 78.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+</html>
